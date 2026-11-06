@@ -1,0 +1,46 @@
+#include <iostream>
+#include <vector>
+#include <bits/stdc++.h>
+#include <cstring>
+#include <cctype>
+using namespace std;
+using ll = long long;
+// 3.1
+char w[10];
+int i;
+int vtri;
+enum commandType { ADD, SCHEDULE, PICK, DROP, MOVE, CREATE, INVALID};
+enum commandType getCommandType (char*command) {
+	for (i=0;command[i] != '\0' && isspace((unsigned char)command[i]);i++);
+	for(;command[i] != '\0' && !isspace((unsigned char)command[i]); i++) {
+		if (vtri<11) w[vtri++]=(char)tolower((unsigned char)command [i]);
+	}
+	w[vtri]='\0';
+	if (strcmp(w,"add")==0)
+		return ADD;
+	else if (strcmp(w,"schedule")==0) 
+		return SCHEDULE;
+	else if (strcmp(w,"pick")==0)
+		return PICK;
+	else if (strcmp(w,"drop")==0)
+		return DROP;
+	else if (strcmp(w,"move")==0) 
+		return MOVE;
+	else if (strcmp(w,"create")==0)
+		return CREATE;
+	else return INVALID;
+}
+int main() {
+    char s[200];
+    const char* ten[] = {"ADD", "SCHEDULE", "PICK", "DROP", "MOVE", "CREATE", "INVALID"};
+
+    cin.getline(s, sizeof(s));
+    commandType kq = getCommandType(s);
+    cout << ten[kq] << endl;
+
+    return 0;
+}
+
+	
+
+	
