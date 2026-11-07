@@ -5,7 +5,7 @@
 #include <cctype>
 using namespace std;
 using ll = long long;
-}
+
 void createMapFromDescription(char*description, int**map){
 	if (checkDescription(description) != -1) {
 		cout << "Invalid Description";
