@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+#include <bits/stdc++.h>
+#include <cstring>
+#include <cctype>
+using namespace std;
+using ll = long long;
+void createMapFromArray ( int inputArray[],int mapSize, int**map) {
+	int k=0;
+	for(int i=0;i<mapsize;i++)
+		for (int j=0;j<mapsize;j++) {
+			map[i][j]=inputArray[k];
+			k++;
+		}
+}
