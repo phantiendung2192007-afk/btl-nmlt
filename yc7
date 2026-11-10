@@ -1,0 +1,18 @@
+void printMap(int**map, int mapSize){          
+	printf ("[");
+	for (int i =0;i<mapSize; i++) {            
+	if (i>0) {
+		printf (" ");
+	}
+		for (int j=0; j<mapSize; j++) {        
+			printf ("%d",map[i][j]);
+			if (j<mapSize-1) {                 
+				printf (", "); 
+		}                                      
+	}                                          
+		if (i<mapSize-1) {                     
+			printf ("\n"); }                  
+		}                                     
+                                          
+	printf ("]"); 
+}
