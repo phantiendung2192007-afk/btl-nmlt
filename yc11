@@ -1,0 +1,10 @@
+int carStatus (struct Car carArray [], int numberOfCar, char* carID) {
+	for (int i=0;i < numberOfCar; i++) {
+		if (strcmp(carArray[i].carID, carID) == 0) {
+			if (isEmpty(carArray[i])) return 0;
+			if (isFull(carArray[i])) return 2;
+			return 1;
+		}
+	}
+	return -1;
+}
