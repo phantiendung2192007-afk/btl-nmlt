@@ -1,0 +1,26 @@
+int addCar (struct Car* carArray, int numberOfCar, char* carID ) {
+
+if (numberOfCar >=20) return numberOfCar;
+struct Car*c = &carArray [numberOfCar];
+int k;
+for ( k=0;carID[k] != '\0';k++) {
+	c ->carID[k] = carID[k];
+}
+c -> carID[k] = '\0';
+c->speed = 20;
+for (int i=0;i<6;i++) {
+	c->operationTypeArray[i] = -1;
+}
+c -> numberOfOperations = 0;
+c -> numberOfCustomer = 0;
+c -> currentLocation =0;
+c -> headToLocation = 0;
+c -> timeToDestination = 0;
+c -> timeOnTheWay = 0;
+for (int i = 0; i<3; i++) {
+	c -> customerList[i].customerID [0] ='\0';
+	c -> customerList[i].pickUpLocation = 0;
+	c -> customerList[i].dropOffLocation = 0;
+}
+return numberOfCar + 1;
+}
