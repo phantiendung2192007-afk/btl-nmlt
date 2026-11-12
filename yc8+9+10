@@ -30,3 +30,9 @@ int isFull (struct Car car) {
 	if (car.numberOfCustomer == 3) return 1;
 	return 0;
 }
+
+
+int isEmpty (struct Car car) {
+	if (car.numberOfCustomer == 0) return 1;
+	return 0;
+}
