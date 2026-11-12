@@ -24,3 +24,9 @@ for (int i = 0; i<3; i++) {
 }
 return numberOfCar + 1;
 }
+
+
+int isFull (struct Car car) {
+	if (car.numberOfCustomer == 3) return 1;
+	return 0;
+}
