@@ -1,0 +1,22 @@
+void handleCustomerRequests (char* customerRequests, struct Customer* customers) {
+	int i = 0;
+	for (int k=0 ; customerRequests [i] != '\0' ; k++) {
+		for (int j = 0; j<3; j++) {
+			customers[k].customerID[j] = customerRequests[i];
+			i++;
+		}
+		customers[k].customerID[3] = '\0';
+		i++;
+		int pick = 0;
+		for (; customerRequests[i] >='0' && customerRequests[i] <= '9';i++) {
+			pick = pick*10 + (customerRequests[i]-'0');
+		}
+		customers[k].pickUpLocation = pick;
+		i++;
+		int drop=0;
+		for (;customerRequests[i] >='0' && customerRequests[i] <= '9';i++) {
+			drop = drop*10+(customerRequests[i]-'0');
+		}
+		customers[k].dropOffLocation = drop;
+	}
+}
