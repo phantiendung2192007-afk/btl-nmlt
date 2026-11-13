@@ -1,0 +1,18 @@
+void schedulePassengers (struct Car*car, char*customerRequests) {
+	if (car -> numberOfCustomer == 3) {
+		printf ("Car %s is full, cannot add more customers!",car->carID);
+		return;
+	}
+	int numRequests = countCustomerRequests (customerRequests);
+	struct Customer customers[100];
+	handleCustomerRequests(customerRequests, customers);
+	for (int i=0;i<numRequests;i++) {
+		if (car->numberOfCustomer <3) {
+		
+				addCustomer(car,customers[i]);
+			}
+			else { 
+			printf ("Car %s is full now, Customer %s is skipped!", car->carID,customers[i].customerID);
+			}
+		}
+	}
