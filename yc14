@@ -1,0 +1,8 @@
+void addCarOperationType(struct Car*car, int type) {
+	if (car->numberOfOperations >= 6) {
+		printf ("Car %s: Operation list is full!",car->carID);
+		return;
+	}
+	car->operationTypeArray[car->numberOfOperations]=type;
+	car->numberOfOperations++;
+}
