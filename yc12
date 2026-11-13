@@ -1,0 +1,8 @@
+int countCustomerRequests(char* customerRequests) {
+    int count = 0;
+    for (int i = 0; customerRequests[i] != '\0'; i++) {
+        if (customerRequests[i] == 'p')
+            count++;
+    }
+    return count;
+}
