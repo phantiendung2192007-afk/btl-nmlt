@@ -1,0 +1,10 @@
+void addCustomer (struct Car*car, struct Customer customer) {
+	if (car->numberOfCustomer == 3) {
+		printf ("Car %s: Customer List is full",car->carID);
+		return;
+	}
+	car->customerList[car->numberOfCustomer]=customer;
+	car->numberOfCustomer++;
+	addCarOperationType(car,0);
+	addCarOperationType(car,1);
+}
