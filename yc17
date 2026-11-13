@@ -1,0 +1,5 @@
+int calculateTime(int**map, int mapSize, struct Car* car, int destination) {
+	int distance = findShortestPath(map, mapSize, car->currentLocation, destination);
+	int time = (distance*60) / car->speed;
+	return time;
+}
