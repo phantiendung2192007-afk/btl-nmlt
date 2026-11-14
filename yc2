@@ -12,17 +12,17 @@ int checkDescription(char* description) {
 		return length;
 	for (int i=0;i<length;i++) {
 		char d = description[i];
-		int hople=0;
+		
 		if (d==' ' && (i==0 || i==length -1 ))
 		return i;
 		else if ( d==' ' || d==','||d=='.'||d=='-'||d==':')
-			hople=1;
+		continue;
 		else if (d>='a' && d<='z')
-			hople = 1;
+		continue;
 		else if (d>='A' && d<='Z')
-			hople = 1;
+		continue;
 		else if (d>='0' && d<='9')
-			hople = 1;
+		continue;
 		else return i;
 		
 	}
