@@ -1,0 +1,10 @@
+int operationCheck ( int **map,int mapSize, struct Car*car,int destinationLocation, int time) {
+	int traveltime = calculateTime(map,mapSize,car,destinationLocation);
+	if (traveltime <= time || (traveltime>time && time >=traveltime/2.0)) {
+		car->currentLocation=destinationLocation;
+		if (car->currentLocation == destinationLocation) {
+			return 1;
+		} else return 0;
+	}
+	return 1;
+}
