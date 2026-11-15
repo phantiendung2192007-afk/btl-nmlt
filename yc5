@@ -16,4 +16,4 @@ void updateMap(int** map, int mapSize) {
 			}
 			}
 	}
-}
+
