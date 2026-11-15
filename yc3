@@ -1,26 +1,14 @@
 void createMapFromDescription(char* description, int** map) {
     // ----- Begin: Student Answer -----
+void createMapFromDescription(char* description, int** map) {
+    // ----- Begin: Student Answer -----
     if (checkDescription(description) != -1) {
-        printf("Invalid Description!\n");
+        printf("Invalid Description!");
         return;
     }
-    int f, t, d, n, maxIdx = 0;
+
+    int f, t, d, n;
     char* p = description;
-    // Lượt 1: tìm chỉ số địa điểm lớn nhất để biết N
-    while (1) {
-        n = 0;
-        if (sscanf(p, " The distance from %d to %d is %d km%n", &f, &t, &d, &n) < 3 || n == 0) break;
-        if (f > maxIdx) maxIdx = f;
-        if (t > maxIdx) maxIdx = t;
-        p += n;
-        if (*p == '.') p++;
-    }
-    if (p == description) return; // không có câu nào
-    int N = maxIdx + 1;
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < N; j++) map[i][j] = 0;
-    // Lượt 2: gán giá trị (câu sau ghi đè câu trước)
-    p = description;
     while (1) {
         n = 0;
         if (sscanf(p, " The distance from %d to %d is %d km%n", &f, &t, &d, &n) < 3 || n == 0) break;
